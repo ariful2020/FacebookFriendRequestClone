@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/fonts/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="main-section">
+    <div class="arif div">
+        <div class="Chat all-hide">
+            <i class="fas fa-comment-alt"></i>
+        </div>
+        <div class="img">
+            <img src="image/Arif1.png" alt="">
+        </div>
+        <div class="content">
+         <h2 class="name">Ariful Islam Noyon</h2>
+         <p class="text">I am Full Stack Web Developer</p>
+        </div>
+        <div class="btns">
+        <div ><button class="btn-1 btn"><i class="fas fa-user"></i>Add Friend</button></div>
+        <div ><button class="btn-2 btn btn-same all-hide all-show">Cancel Request</button></div>
+        </div>
+    </div>
+    <div class="arif-2 div">
+        <div class="Chat all-hide">
+            <i class="fas fa-comment-alt"></i>
+        </div>
+        <div class="img">
+            <img src="image/rubel.jpg" alt="">
+        </div>
+        <div class="content">
+         <h2 class="name">Ariful Islam Noyon</h2>
+         <p class="text">I am Full Stack Web Developer</p>
+        </div>
+        <div class="btns">
+        <div ><button class="btn-1 btn all-hide  all-show"><i class="fas fa-user"></i>Confirm</button></div>
+        <div><button class="btn-2 btn btn-same all-hide all-show">Cancel</button></div>
+        </div>
+    </div>
+</div>
+
+<div class="chat-box" style="width: 400px; margin:50px auto;">
+    <form action="">
+    <textarea style="display: block;"" form ="testformid" name="taname" id="taid" cols="35" rows="5" wrap="soft" placeholder="Message"></textarea>
+    <input style="padding: 12px 15px; width: 200px; margin-top: 10px;" type="button" value="Send">
+</form>
+
+</div>
+
+<script src="assets/js/jquery-3.6.0.min.js"></script>
+<script>
+
+$('.arif .btn-1').click(function(){
+    $('.all-show').show();
+    $('.arif .btn-1').html('Request Send');
+})
+$('.arif-2 .btn-1').click(function(){
+    $('.btn-1').text('Friend');
+    $('.btn-same').text('Unfriend');
+    $('.Chat').show();
+})
+
+$('.btn-same').click(function(){
+    $('.all-hide').hide();
+    $('.arif .btn-1').html('<i class="fas fa-user"></i>Add Friend');
+    $('.arif-2 .btn-1').html('<i class="fas fa-user"></i>Confirm');
+    $('.arif .btn-2').text('Request Cancel');
+    $('.arif-2 .btn-2').text('Cancel');
+})
+
+
+$('.Chat').click(function(){
+    $('.chat-box').fadeToggle(1000);
+})
+
+
+</script>
+
+
+</body>
+</html>
